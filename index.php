@@ -5,7 +5,7 @@
 	ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 6.0)');
 	error_reporting(E_ERROR ^ E_WARNING);
 	
-	$hindiCharactersRegex = '/^[\x{0900}-\x{097F}]+$/u';
+	$hindiCharactersRegex = '~/^[\x{0900}-\x{097F}]+$/u~';
 	$englishCharatersRegex = '/[^\W_ ] /';
 	
 	$result = array();
