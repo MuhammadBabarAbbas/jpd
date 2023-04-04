@@ -5,7 +5,7 @@
 	ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 6.0)');
 	error_reporting(E_ERROR ^ E_WARNING);
 	
-	$hindiCharactersRegex = '~^[\u0900-\u097F]+$~';
+	$hindiCharactersRegex = '~^[\x{0900}-\x{097F}]+$~';
 	$englishCharatersRegex = '/[^\W_ ] /';
 	
 	$result = array();
@@ -153,7 +153,7 @@
 			<form name="linksCheckingForm" method="post" action="">
 			<tr>
 				<td>
-					<textarea name="links" id="links" cols="30" rows="10"></textarea>
+					<textarea name="links" id="links" cols="30" rows="10"><?php echo isset($_REQUEST["links"]) ? $_REQUEST["links"] : ""; ?></textarea>
 				</td>
 			</tr>
 			<tr>
