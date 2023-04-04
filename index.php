@@ -153,7 +153,7 @@
 			<form name="linksCheckingForm" method="post" action="">
 			<tr>
 				<td>
-					<textarea name="links" id="links" cols="30" rows="10"><?php echo $_REQUEST["links"]; ?></textarea>
+					<textarea name="links" id="links" cols="30" rows="10"><?php echo isset($_REQUEST["links"]) ? $_REQUEST["links"] : ""; ?></textarea>
 				</td>
 			</tr>
 			<tr>
